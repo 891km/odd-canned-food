@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Odd Canned Food</title>
+
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.typekit.net/wxt4rsq.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="image/icons/icon_favicon.png"
+    />
+
+    <script
+      src="script.js"
+      defer
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- 웹폰트(Typekit) 로딩 스크립트 -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "qeb6pge",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1 class="header_title">Odd Canned Food</h1>
+
+      <div class="zoom"></div>
+
+      <div class="header_popover"></div>
+      <div class="header_popover_content">
+        <div class="header_icon"></div>
+        <p class="header_p">
+          세상에는 잘 알려지지 않은 다양하고 특이한 통조림들이 많이 있습니다.
+          이러한 이색적인 통조림들을 한 곳에서 볼 수 있는 웹사이트를
+          기획했습니다. 이 웹사이트를 통해 보는 재미를 느끼는 동시에, 다양한
+          통조림 정보와 통조림을 이용한 레시피도 확인할 수 있습니다. 캔을 열어서
+          안에 무엇이 들어있는지 구경해보세요!
+        </p>
+      </div>
+    </div>
+
+    <!-- cursor -->
+    <div class="cursor">Open !</div>
+
+    <!-- modal -->
+    <div class="modal">
+      <img
+        class="modal_img"
+        src=""
+      />
+      <h1 class="modal_title"></h1>
+      <div class="modal_tags">
+        <div class="tag_from"></div>
+        <div class="tag_category"></div>
+        <div class="tag_gram"></div>
+        <div class="tag_kcal"></div>
+      </div>
+      <p class="modal_para"></p>
+    </div>
+
+    <!-- cans -->
+    <div class="main">
+      <div class="section section1">
+        <div class="categoryTag"><h3>Meat & Seafood</h3></div>
+
+        <div class="shelf">
+          <div class="shelf_top"></div>
+          <div class="shelf_front"></div>
+        </div>
+
+        <div class="cans">
+          <div
+            class="can"
+            id="cat1_can_01"
+            data-title="후쿠이 홍게 다리 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can1_img.png?v=1683058330809"
+            data-para="다진 홍게 다리살이 들어간 고급 통조림입니다. 그냥 먹어도 맛있지만, 샐러드나 초무침, 볶음밥 등 다양한 요리에 넣어 먹어도 맛있어요!"
+            data-from="Japan"
+            data-category="Seafood"
+            data-gram="150g"
+            data-kcal="309kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/can1_close.png?v=1681353500294"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/can1_open.png?v=1681353507107"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat1_can_02"
+            data-title="아르헨티나 리버 스프레드"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can2_img.png?v=1683058332843"
+            data-para="돼지의 간과 지방, 육수에 각조 양념과 향신료를 넣은 만든 고소하고 담백한 돼지고기 스프레드입니다. 토스트나 바게트 같은 빵에 발라먹거나 카나페나 샐러드의 토핑으로 먹어보세요!"
+            data-from="Philippines"
+            data-category="Meat"
+            data-gram="85g"
+            data-kcal="167kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can2_close.png?v=1682611357967"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can2_open.png?v=1682611361400"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat1_can_03"
+            data-title="미스터칸소 그릴 치킨 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can3_img.png?v=1683058337271"
+            data-para="맥주에 어울리는 통조림이라는 컨셉으로 만들어진 뼈 있는 치킨 구이 통조림입니다. 후추의 향기와 육즙을 담고 있고, 부드러운 식감으로 먹기 편해요. 컨셉에 맞게 맥주와 함께 먹어보는 것을 추천해요!"
+            data-from="Japan"
+            data-category="Meat"
+            data-gram="110g"
+            data-kcal="215kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can3_close.png?v=1683018373104"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can3_open.png?v=1683018377272"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat1_can_04"
+            data-title="이노우에 훈제 굴 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can4_img.png?v=1683058338126"
+            data-para="일본의 미야기현산의 굴을 사용해 훈제로 굽고, 오일에 절인 훈제 굴 통조림입니다. 그대로 술안주로 먹어도 좋고, 파스타 같은 요리에 사용해도 잘 어울려요!"
+            data-from="Japan"
+            data-category="Seafood"
+            data-gram="110g"
+            data-kcal="-kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can4_close.png?v=1683018378586"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can4_open.png?v=1683018379708"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat1_can_05"
+            data-title="커리부르스트 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can5_img.png?v=1683058339121"
+            data-para="독일의 소시지 요리인 커리부르스트를 간편히 즐길 수 있는 통조림입니다. 커리 향신료가 들어간 토마토 소스에 커리 가루를 뿌린 음식으로, 흔히 감자튀김과 같이 먹어요!"
+            data-from="Germany"
+            data-category="Meat"
+            data-gram="400g"
+            data-kcal="-kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can5_close.png?v=1683018380630"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can5_open.png?v=1683018381615"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat1_can_06"
+            data-title="후쿠이 고등어 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can6_img.png?v=1683058339982"
+            data-para="소금으로만 양념된 삶은 고등어 통조림입니다. 적은 양념으로 고등어 본래의 맛을 느낄 수 있고, 다양한 요리에 이용해 먹을 수 있어요!"
+            data-from="Japan"
+            data-category="Seafood"
+            data-gram="180g"
+            data-kcal="556kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can6_close.png?v=1683044844652"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can6_open.png?v=1683044848693"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat1_can_07"
+            data-title="씨트리 성게알 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can7_img.png?v=1683058340872"
+            data-para="한국 동해 바다의 성게알을 담은 성게알 통조림입니다. 뜨거운 밥에 비벼 먹거나 김밥, 성게샐러드, 성게볶음밥, 술안주 등으로 먹어도 좋아요!"
+            data-from="Korea"
+            data-category="Seafood"
+            data-gram="90g"
+            data-kcal="-kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can7_close.png?v=1683044850139"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat1_can7_open.png?v=1683044851311"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="section section2">
+        <div class="categoryTag"><h3>Rice & Side dishes</h3></div>
+
+        <div class="shelf">
+          <div class="shelf_top"></div>
+          <div class="shelf_front"></div>
+        </div>
+
+        <div class="cans">
+          <div
+            class="can"
+            id="cat2_can_01"
+            data-title="미스터칸소 파에야 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can1_img.png?v=1683058341826"
+            data-para="스페인의 쌀밥 요리인 파에야를 담은 통조림입니다. 해산물의 향기와 쌀의 식감으로 맛있게 먹을 수 있어요. 요리하기 귀찮을 때 간편하게 먹기 좋아요!"
+            data-from="Japan"
+            data-category="Rice"
+            data-gram="145g"
+            data-kcal="245kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can1_close.png?v=1682858905543"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can1_open.png?v=1682858909815"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat2_can_02"
+            data-title="다시마끼 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can2_img.png?v=1683058342711"
+            data-para="다시마끼는 일본식 계란말이로, 달달한 맛과 폭신한 식감이 특징입니다. 가랑어와 다시마로 만든 국물이 함께 들어있어요. 간편하게 밥과 먹기 좋고 맥주와의 조합도 좋아요!"
+            data-from="Japan"
+            data-category="side"
+            data-gram="190g"
+            data-kcal="-kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat4_can1_close.png?v=1682859092360"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat4_can1_open.png?v=1682859093196"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat2_can_03"
+            data-title="닭껍질 된장조림 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can3_img.png?v=1683058343592"
+            data-para="닭 껍질을 세 종류의 된장으로 삶은 요리를 담은 통조림입니다. 부드러운 식감 속에 있는 매운 맛이 밥과도 어울리고 맥주의 상쾌감이랑도 아주 잘 어울려요!"
+            data-from="Japan"
+            data-category="side"
+            data-gram="130g"
+            data-kcal="242kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat4_can2_close.png?v=1682859093980"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat4_can2_open.png?v=1682859094942"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat2_can_04"
+            data-title="미스터칸소 고추잡채 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can4_img.png?v=1683058344491"
+            data-para="중국요리의 인기메뉴인 고추잡채가 들어있는 통조림입니다. 고기와 야채의 맛이 풍부해요. 편리하게 밥반찬으로 먹기 좋아요!"
+            data-from="Japan"
+            data-category="side"
+            data-gram="135g"
+            data-kcal="-kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can2_close.png?v=1683018386913"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can2_open.png?v=1683018387693"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat2_can_05"
+            data-title="후쿠야 멘츠나간칸 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can5_img.png?v=1683058345320"
+            data-para="참치를 매운 명란젓의 절임액에 담그어 만들어진 매콤한 참치 캔 통조림입니다. 부드러운 식감의 참치와 명란의 감칠맛에 매운맛이 더해져 밥반찬으로도 술안주로도 좋아요!"
+            data-from="Japan"
+            data-category="side"
+            data-gram="90g"
+            data-kcal="-kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can5_close.png?v=1683044852939"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can5_open.png?v=1683044853774"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat2_can_06"
+            data-title="타이 커리 양념 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can6_img.png?v=1683058346121"
+            data-para="태국 본연의 맛과 향을 느낄 수 있는 태국 커리 양념 통조림입니다. 보통 코코넛 밀크와 통조림 양념을 함께 볶아서 끓여 먹어요.이 통조림을 통해 빠르고 맛있는 태국 요리를 만들 수 있어요!"
+            data-from="Thailand"
+            data-category="side"
+            data-gram="114g"
+            data-kcal="114kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can6_close.png?v=1683044854701"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can6_open.png?v=1683044855542"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat2_can_07"
+            data-title="도즈비스트로 라자냐 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can7_img.png?v=1683058346936"
+            data-para="납작한 판 형태의 파스타인 라자냐가 들어있는 통조림입니다. 통조림으로 간편하게 겹겹이 들어있는 고기와 채소, 토마토소스와 치즈의 풍부한 맛을 느낄 수 있어요!"
+            data-from="Germany"
+            data-category="dish"
+            data-gram="400g"
+            data-kcal="740kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can7_close.png?v=1683044856451"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat2_can7_open.png?v=1683044857313"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="section section3">
+        <div class="categoryTag"><h3>Sweat Desserts</h3></div>
+
+        <div class="shelf">
+          <div class="shelf_top"></div>
+          <div class="shelf_front"></div>
+        </div>
+
+        <div class="cans">
+          <div
+            class="can"
+            id="cat3_can_01"
+            data-title="스위트캔 치즈케이크"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can1_img.png?v=1683058347791"
+            data-para="촉촉한 식감의 치즈와 레몬의 향이 풍부한 치즈케이크 통조림입니다. 통조림 하나로 고열량의 에너지를 섭취할 수 있어요!"
+            data-from="Japan"
+            data-category="dessert"
+            data-gram="150g"
+            data-kcal="501kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can1_close.png?v=1682859087461"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can1_open.png?v=1682859088394"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat3_can_02"
+            data-title="퍽 크림 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can2_img.png?v=1683058348641"
+            data-para="우유에서 추출한 신선한 크림이 담긴 통조림입니다. 크리미한 질감과 풍미로 다양한 요리와 디저트의 재료로 사용하기 좋아요!"
+            data-from="Denmark"
+            data-category="dessert"
+            data-gram="160g"
+            data-kcal="235kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can2_close.png?v=1682881850713"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can2_open.png?v=1682881853096"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat3_can_03"
+            data-title="슈퍼케이크 브라우니 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can3_img.png?v=1683058349447"
+            data-para="브라우니 케이크가 담긴 통조림입니다. 비건제품으로 무설탕, 글루텐 프리의 저탄수화물 고단백 케이크로, 작은 선물이나 기념품으로도 좋아요!"
+            data-from="Austria"
+            data-category="dessert"
+            data-gram="170g"
+            data-kcal="515kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can3_close.png?v=1682881854538"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can3_open.png?v=1682881855753"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat3_can_04"
+            data-title="베가 가공 치즈 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can4_img.png?v=1683058350327"
+            data-para="호주산 체다치즈가 담긴 통조림입니다. 자연스러운 크림 색상과 체다치즈의 풍미, 기분 좋은 질감으로 자르기 쉽고 맛있어요. 냉장보관이 따로 필요없어 보관하기 좋아요."
+            data-from="Australia"
+            data-category="dessert"
+            data-gram="200g"
+            data-kcal="606kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can4_close.png?v=1683018401081"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can4_open.png?v=1683018402941"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat3_can_05"
+            data-title="아오모리 사과 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can5_img.png?v=1683058351244"
+            data-para="일본의 아오모리 땅에서 자란 사과가 담긴 과일 통조림입니다. 사과를 얇게 썰어 시럽을 묻혀 담아, 상큼한 향과 아삭한 식감이 매력적으로 디저트로 먹기 좋아요."
+            data-from="Japan"
+            data-category="dessert"
+            data-gram="215g"
+            data-kcal="157kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can5_close.png?v=1683044861597"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can5_open.png?v=1683044862409"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat3_can_06"
+            data-title="감자 콘비프 샐러드 통조림"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can6_img.png?v=1683058352090"
+            data-para="향긋한 콘비프 감자 샐러드가 담긴 통조림입니다. 상추에 싸먹거나 술안주로 바게트나 크래커에 올려먹는 등 간편하게 먹기 좋아요!"
+            data-from="Japan"
+            data-category="dessert"
+            data-gram="105g"
+            data-kcal="249kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can6_close.png?v=1683044863315"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can6_open.png?v=1683044864101"
+            />
+          </div>
+
+          <div
+            class="can"
+            id="cat3_can_07"
+            data-title="하인즈 스폰지 푸딩"
+            data-img="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can7_img.png?v=1683058352863"
+            data-para="영국의 전통 디저트인 스폰지 푸딩이 담긴 통조림입니다. 건포도가 박혀있는 케이크로, 전자레인지를 이용해 간편하게 먹을 수 있어요."
+            data-from="America"
+            data-category="dessert"
+            data-gram="267g"
+            data-kcal="910kcal"
+          >
+            <img
+              class="can_close"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can7_close.png?v=1683044864945"
+            />
+            <img
+              class="can_open"
+              src="https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cat3_can7_open.png?v=1683044865721"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="section section_foot">
+        <div class="categoryTag"><h3>Designed By Minjoo Kim</h3></div>
+        <div class="shelf">
+          <div class="shelf_top"></div>
+          <div class="shelf_front"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
