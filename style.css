@@ -199,6 +199,7 @@ body {
   font-size: 11pt;
   line-height: 200%;
   text-align: center;
+  word-break: keep-all;
 
   position: relative;
   width: 70%;
@@ -461,6 +462,8 @@ body {
   display: block;
   margin: auto;
   padding: 14px;
+
+  word-break: keep-all;
 
   border-radius: 12px;
   outline: 2.2px solid rgb(52, 52, 52);
