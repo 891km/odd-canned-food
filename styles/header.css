@@ -1,9 +1,12 @@
 #head-sidebar-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
   display: inline-flex;
   flex-direction: row;
   width: auto;
   height: auto;
-  /* background-color: yellow; */
+  z-index: 101;
 }
 
 header {
@@ -37,7 +40,6 @@ header h1 {
   position: relative;
   width: auto;
   height: auto;
-  background-color: yellow;
 
   writing-mode: vertical-rl;
 
@@ -53,7 +55,7 @@ header h1 {
   width: 40vw;
   min-width: 500px;
   height: 100vh;
-  background-color: #00ffffaa;
+  background-color: #fff;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
   z-index: 1000;

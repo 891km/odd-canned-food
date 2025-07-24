@@ -1,9 +1,11 @@
 $(document).ready(function () {
   // 변수
   var zoom_btn = $(".zoom-btn");
+  let isSideOpen = false;
   var sidebar_btn = $("#sidebar-btn");
   var sidebar = $("#sidebar");
   var sidebarWrap = $("#head-sidebar-wrap");
+  // sidebarWrap.css("transform", `translateX(-${sidebarWidth}px)`);
 
   var cans = $(".cans");
   var can = $(".can");
@@ -44,17 +46,16 @@ $(document).ready(function () {
     }
   });
 
-  let isOpen = false;
   sidebar_btn.click(function () {
     var sidebarWidth = sidebar.width();
     console.log("clicked");
-    isOpen = !isOpen;
 
-    if (isOpen) {
+    if (isSideOpen) {
       sidebarWrap.css("transform", "translateX(0)");
     } else {
       sidebarWrap.css("transform", `translateX(-${sidebarWidth}px)`);
     }
+    isSideOpen = !isSideOpen;
   });
 
   // 태그 로테이션 랜덤으로
@@ -63,24 +64,6 @@ $(document).ready(function () {
 
     $(this).css("transform", "rotate(" + randomRot + "deg)");
   });
-
-  // 캔에 mouseover 시
-  //     can.mouseover(function(){
-  //         cursor.css("visibility", 'visible');
-  //         cursor.css("opacity", '1');
-
-  //         modal.css("visibility", 'visible');
-  //         modal.css("opacity", '1');
-
-  //         modal_title.text($(this).data('title'));
-  //         modal_para.text($(this).data('para'));
-  //         modal_img.attr("src", $(this).data('img'));
-
-  //         modal_from.text($(this).data('from'));
-  //         modal_category.text($(this).data('category'));
-  //         modal_gram.text($(this).data('gram'));
-  //         modal_kcal.text($(this).data('kcal'));
-  //     });
 
   var canIsOpen = 0;
   // 캔 click 시
@@ -129,15 +112,6 @@ $(document).ready(function () {
     cursor.css("visibility", "hidden");
     cursor.css("opacity", "0");
   });
-
-  // 캔에 mouseout 시
-  //     can.mouseout(function(){
-  //         modal.css("visibility", 'hidden');
-  //         modal.css("opacity", '0');
-
-  //         cursor.css("visibility", 'hidden');
-  //         cursor.css("opacity", '0');
-  //     });
 
   // 캔에 mousemove 시
   can.mousemove(function (e) {
