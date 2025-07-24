@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-select: none;
+}
+
+*:not(
+    .header,
+    .header_icon,
+    .header_p,
+    .header_popover,
+    .header_popover_content,
+    .header_title,
+    .categoryTag,
+    .categoryTag h3,
+    .zoom,
+    .can_open,
+    .modal,
+    .modal_img,
+    .modal_para,
+    .modal_tags,
+    .modal_title,
+    .tag_from,
+    .tag_category,
+    .tag_gram,
+    .tag_kcal
+  ) {
+  transition: all 0.6s ease;
+}
+
+*:not(.cans)::-webkit-scrollbar {
+  display: none;
+}
+
+/* width */
+.cans::-webkit-scrollbar {
+  height: 18px;
+}
+
+/* Track */
+.cans::-webkit-scrollbar-track {
+  background: rgba(180, 110, 80, 0);
+}
+
+/* Handle */
+.cans::-webkit-scrollbar-thumb {
+  background: rgba(65, 44, 30, 0.6);
+}
+
+/* Handle on hover */
+.cans::-webkit-scrollbar-thumb:hover {
+  background: rgb(65, 44, 30);
+}

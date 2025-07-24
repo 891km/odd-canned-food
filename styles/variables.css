@@ -1,0 +1,48 @@
+@font-face {
+  /* 한글 모달 제목 폰트 */
+  font-family: "ONE-Mobile-POP";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  /* 영어 제목 폰트 */
+  font-family: "hobeaux";
+  src: url("https://use.typekit.net/af/49aea1/00000000000000007735b200/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/49aea1/00000000000000007735b200/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/49aea1/00000000000000007735b200/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+}
+
+:root {
+  --backgorundColor: white;
+
+  --headerWidth: 100px;
+  --popoverWidth: 340px;
+
+  --canWidth: 270px;
+  --canHeight: calc(var(--canWidth) * 1.2);
+  --canReflect: calc(var(--canHeight) * 0.46);
+
+  --sectionHeight: calc(var(--canHeight) * 1.4);
+
+  --shelfHeight: calc(var(--canWidth) * 0.64);
+
+  --modalWidth: 270px;
+}

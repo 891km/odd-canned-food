@@ -1,0 +1,78 @@
+.modal {
+  visibility: hidden;
+  position: absolute;
+  z-index: 10;
+
+  background-color: white;
+  width: var(--modalWidth);
+  height: auto;
+  pointer-events: none;
+
+  box-sizing: content-box;
+  text-align: center;
+  align-items: center;
+  display: block;
+  margin: auto;
+  padding: 14px;
+
+  word-break: keep-all;
+
+  border-radius: 12px;
+  outline: 2.2px solid rgb(52, 52, 52);
+  filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.2));
+}
+
+.modal_img {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  outline: 2px solid #d9d9d9;
+  border-radius: 8px;
+}
+
+.modal_title {
+  font-family: "ONE-Mobile-POP";
+  font-weight: 100;
+  font-size: 18pt;
+
+  position: relative;
+  /* background-color: red; */
+  width: 100%;
+  height: auto;
+  padding: 16px 0px;
+}
+
+.modal_para {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 11pt;
+  line-height: 160%;
+
+  position: relative;
+  width: 85%;
+  margin: auto;
+  padding-bottom: 12px;
+}
+
+.modal_tags {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10pt;
+
+  width: auto;
+  height: auto;
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  overflow: auto;
+  box-sizing: content-box;
+  padding-bottom: 16px;
+}
