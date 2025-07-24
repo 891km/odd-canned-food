@@ -1,9 +1,33 @@
 @font-face {
+  /* 한글 모달 제목 폰트 */
   font-family: "ONE-Mobile-POP";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  /* 영어 제목 폰트 */
+  font-family: "hobeaux";
+  src: url("https://use.typekit.net/af/49aea1/00000000000000007735b200/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/49aea1/00000000000000007735b200/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/49aea1/00000000000000007735b200/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
 }
 
 :root {
@@ -86,7 +110,7 @@
 .zoom {
   /* background-color: red; */
   opacity: 100%;
-  background-image: url("https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/zoom.png?v=1683060703648");
+  background-image: url("./images/icons/zoom.png");
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -100,9 +124,7 @@
 
 .zoom:active {
   transform: translate(-50%, 0%) scale(1.02);
-  cursor: url("https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cursor_hover_60px.png?v=1682957832534")
-      20 -10,
-    auto;
+  cursor: url("./images/cursor/cursor_hover_60px.png") 20 -10, auto;
   transform: all 0.2s ease;
 }
 
@@ -114,9 +136,7 @@ body {
   overflow-x: hidden;
 
   scroll-behavior: smooth;
-  cursor: url(https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/cursor_pointer_60px.png?v=1682957833054)
-      20 -10,
-    auto;
+  cursor: url("./images/cursor/cursor_pointer_60px.png") 20 -10, auto;
 }
 
 .header {
@@ -186,14 +206,14 @@ body {
   padding-top: 10vh;
   transform: scale(1);
 
-  background-image: url(https://cdn.glitch.global/7f0ea4aa-bbfa-465a-a970-aa7dc8463027/popover_title.png?v=1682994000987);
+  background-image: url("./images/icons/popover_title.png");
   background-size: 300px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .header_p {
-  font-family: "pretendard", sans-serif;
+  font-family: "Pretendard", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 11pt;
@@ -492,7 +512,7 @@ body {
 }
 
 .modal_para {
-  font-family: "pretendard", sans-serif;
+  font-family: "Pretendard", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 11pt;
@@ -505,7 +525,7 @@ body {
 }
 
 .modal_tags {
-  font-family: "pretendard", sans-serif;
+  font-family: "Pretendard", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 10pt;
