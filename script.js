@@ -1,6 +1,9 @@
 $(document).ready(function () {
   // 변수
-  var zoom = $(".zoom");
+  var zoom_btn = $(".zoom-btn");
+  var sidebar_btn = $("#sidebar-btn");
+  var sidebar = $("#sidebar");
+  var sidebarWrap = $("#head-sidebar-wrap");
 
   var cans = $(".cans");
   var can = $(".can");
@@ -31,13 +34,26 @@ $(document).ready(function () {
   cans.css("bottom", "58px");
 
   // 줌 버튼
-  zoom.click(function () {
+  zoom_btn.click(function () {
     if ($(":root").css("--canWidth") == "270px") {
       $(":root").css("--canWidth", "180px");
       cans.css("bottom", "58px");
     } else {
       $(":root").css("--canWidth", "270px");
       cans.css("bottom", "84px");
+    }
+  });
+
+  let isOpen = false;
+  sidebar_btn.click(function () {
+    var sidebarWidth = sidebar.width();
+    console.log("clicked");
+    isOpen = !isOpen;
+
+    if (isOpen) {
+      sidebarWrap.css("transform", "translateX(0)");
+    } else {
+      sidebarWrap.css("transform", `translateX(-${sidebarWidth}px)`);
     }
   });
 

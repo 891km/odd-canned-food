@@ -1,80 +1,70 @@
-.zoom {
-  /* background-color: red; */
-  opacity: 100%;
-  background-image: url("../images/icons/zoom.png");
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  left: 50%;
-  top: 24px;
-  width: 55px;
-  height: 55px;
-  transform-origin: center, center;
-  transform: translate(-50%, 0%) scale(1);
-}
-
-.zoom:active {
-  transform: translate(-50%, 0%) scale(1.02);
-  cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
-  transform: all 0.2s ease;
-}
-
-.header {
-  background-color: white;
-
-  height: 100vh;
-  width: var(--headerWidth);
-  position: fixed;
-  z-index: 20;
-}
-
-.header_title {
+#head-sidebar-wrap {
+  display: inline-flex;
+  flex-direction: row;
   width: auto;
   height: auto;
-
-  color: black;
-  font-family: "hobeaux", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 30pt;
-
-  writing-mode: vertical-rl;
-
-  text-align: center;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(-1);
+  /* background-color: yellow; */
 }
 
-.header_popover {
-  position: fixed;
+header {
+  /* position: fixed; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   background-color: white;
   width: var(--headerWidth);
   height: 100vh;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
-  z-index: -1;
-
-  transition: all 0.3s ease;
+  z-index: 100;
 }
 
-.header_popover_content {
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
+header h1 {
+  width: auto;
+  height: auto;
+}
+
+#sidebar-btn {
+  all: unset;
+  color: black;
+  font-family: "hobeaux", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30pt;
+
+  position: relative;
+  width: auto;
+  height: auto;
+  background-color: yellow;
+
+  writing-mode: vertical-rl;
+
+  transform: scale(-1);
+}
+
+#sidebar {
+  position: relative;
+  /* position: fixed; */
+  display: block;
   top: 0;
   left: 0;
-  width: 0px;
-  margin-left: var(--headerWidth);
+  width: 40vw;
+  min-width: 500px;
   height: 100vh;
-  z-index: -2;
-
-  display: block;
+  background-color: #00ffffaa;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  /* transform: translateX(-100%); */
 }
 
-.header_icon {
+#sidebar.active {
+  transform: translateX(0);
+}
+
+#sidebar div {
   width: 100%;
   height: 40%;
   margin: auto;
@@ -88,11 +78,31 @@
   background-position: center;
 }
 
-.header_p {
+header h1:hover {
+  color: black;
+  cursor: pointer;
+  font-size: 31pt;
+  transition: all 0.3s ease;
+  cursor: url("../images/cursor/cursor_pointer_60px.png") 20 -10, auto;
+}
+
+header h1:active {
+  color: white;
+  cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
+  transition: all 0.3s ease;
+}
+
+header h1:active ~ .zoom-btn {
+  opacity: 0%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+#sidebar p {
   font-family: "Pretendard", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 11pt;
+  font-size: 1.6rem;
   line-height: 200%;
   text-align: center;
   word-break: keep-all;
@@ -103,36 +113,23 @@
   margin: auto;
 }
 
-.header_title:hover {
-  color: black;
-  cursor: pointer;
-  font-size: 31pt;
-  transition: all 0.3s ease;
-  cursor: url("../images/cursor/cursor_pointer_60px.png") 20 -10, auto;
-}
-
-.header_title:active {
-  color: white;
-  cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
-  transition: all 0.3s ease;
-}
-
-.header_title:active ~ .zoom {
-  opacity: 0%;
-  background-color: white;
-  transition: all 0.3s ease;
-}
-
-.header_title:active ~ .header_popover {
-  width: calc(var(--headerWidth) + var(--popoverWidth));
-  transition: all 0.3s ease;
-}
-
-.header_title:active ~ .header_popover_content {
-  visibility: visible;
+.zoom-btn {
   opacity: 100%;
-  width: var(--popoverWidth);
-  z-index: 0;
+  background-image: url("../images/icons/zoom.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  width: 55px;
+  height: 55px;
+  transform-origin: center, center;
+  transform: translate(-50%, 0%) scale(1);
+  z-index: 100;
+}
 
-  transition: all 0.3s ease;
+.zoom-btn:active {
+  transform: translate(-50%, 0%) scale(1.02);
+  cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
+  transform: all 0.2s ease;
 }

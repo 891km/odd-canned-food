@@ -1,11 +1,26 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
   -webkit-user-drag: none;
   -moz-user-drag: none;
   -ms-user-drag: none;
   user-select: none;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  cursor: url("../images/cursor/cursor_pointer_60px.png") 20 -10, auto;
 }
 
 *:not(
