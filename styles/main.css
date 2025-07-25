@@ -1,4 +1,4 @@
-.main {
+main {
   /* background-color: yellow; */
   width: 100vw;
   height: 100vh;
@@ -12,11 +12,11 @@
   display: block;
 }
 
-.section {
+main section,
+main footer {
   position: relative;
   width: 100vw;
   height: var(--sectionHeight);
-  /* background-color: white; */
 
   max-width: 100vw;
   overflow: hidden;
@@ -24,17 +24,16 @@
   scroll-snap-align: start;
 }
 
-.section1 {
+main section:first-child {
   padding-top: 20px;
 }
 
-.section_foot {
-  /* background-color: white; */
+main footer {
   width: 100vw;
   height: calc(100vh - var(--sectionHeight));
 }
 
-.section_foot .shelf {
+footer .shelf {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -61,7 +60,7 @@
   /* transform: rotate(-4deg); */
 }
 
-.categoryTag h3 {
+.categoryTag h2 {
   font-family: "hobeaux", sans-serif;
   font-weight: 450;
   font-style: normal;
