@@ -129,8 +129,13 @@ header h1:active ~ .zoom-btn {
   z-index: 100;
 }
 
+.zoom-btn:hover {
+  background-image: url("../images/icons/zoom_hover.png");
+  /* transform: translate(-50%, 0%) scale(1); */
+}
+
 .zoom-btn:active {
-  transform: translate(-50%, 0%) scale(1.02);
+  transform: translate(-50%, 0%) scale(1.1);
   cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
   transform: all 0.2s ease;
 }

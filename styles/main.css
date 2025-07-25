@@ -33,14 +33,6 @@ main footer {
   height: calc(100vh - var(--sectionHeight));
 }
 
-footer .shelf {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: var(--shelfHeight);
-  background-color: rgb(194, 198, 202);
-}
-
 .categoryTag {
   box-sizing: content-box;
   position: absolute;
@@ -56,8 +48,6 @@ footer .shelf {
   padding: 2px 18px;
 
   filter: drop-shadow(2px 0.5px 2px rgba(0, 0, 0, 0.5));
-
-  /* transform: rotate(-4deg); */
 }
 
 .categoryTag h2 {
@@ -122,7 +112,6 @@ footer .shelf {
 }
 
 .can {
-  /* background-color: yellow; */
   display: inline-block;
   width: var(--canWidth);
   height: var(--canHeight);
