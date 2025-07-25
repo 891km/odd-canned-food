@@ -34,7 +34,8 @@
   --backgorundColor: white;
 
   --headerWidth: 100px;
-  --popoverWidth: 340px;
+  --sidebarWidth: 500px;
+  /* --popoverWidth: 340px; */
 
   --canWidth: 270px;
   --canHeight: calc(var(--canWidth) * 1.2);

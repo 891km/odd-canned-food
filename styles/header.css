@@ -2,15 +2,16 @@
   position: fixed;
   left: 0;
   top: 0;
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   width: auto;
   height: auto;
   z-index: 101;
+  transform: translateX(calc(-1 * var(--sidebarWidth)));
+  /* transform: translateX(500px); */
 }
 
 header {
-  /* position: fixed; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -48,18 +49,16 @@ header h1 {
 
 #sidebar {
   position: relative;
-  /* position: fixed; */
   display: block;
   top: 0;
   left: 0;
-  width: 40vw;
-  min-width: 500px;
+  width: var(--sidebarWidth);
   height: 100vh;
   background-color: #fff;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+
   transition: transform 0.3s ease;
   z-index: 1000;
-  /* transform: translateX(-100%); */
 }
 
 #sidebar.active {

@@ -1,22 +1,23 @@
 $(document).ready(function () {
   // 변수
   var zoom_btn = $(".zoom-btn");
-  let isSideOpen = false;
+  // sidebar
   var sidebar_btn = $("#sidebar-btn");
-  var sidebar = $("#sidebar");
-  var sidebarWrap = $("#head-sidebar-wrap");
-  // sidebarWrap.css("transform", `translateX(-${sidebarWidth}px)`);
+  var sidebar_wrap = $("#head-sidebar-wrap");
+  var sidebar_width = $(sidebar).css("width");
+  console.log(sidebar_width);
+  // sidebar_wrap.css("transform", `translateX(-${sidebar_width})`);
+
+  var cursor = $(".cursor");
 
   var cans = $(".cans");
   var can = $(".can");
 
-  var cursor = $(".cursor");
-
+  // modal
   var modal = $(".modal");
   var modal_img = $(".modal_img");
   var modal_title = $(".modal_title");
   var modal_para = $(".modal_para");
-
   var modal_from = $(".tag_from");
   var modal_category = $(".tag_category");
   var modal_gram = $(".tag_gram");
@@ -35,6 +36,13 @@ $(document).ready(function () {
   $(":root").css("--canWidth", "180px");
   cans.css("bottom", "58px");
 
+  // 태그 로테이션 랜덤으로
+  tag.each(function () {
+    var randomRot = Math.floor(Math.random() * 12 - 6);
+
+    $(this).css("transform", "rotate(" + randomRot + "deg)");
+  });
+
   // 줌 버튼
   zoom_btn.click(function () {
     if ($(":root").css("--canWidth") == "270px") {
@@ -46,27 +54,19 @@ $(document).ready(function () {
     }
   });
 
+  // 사이드바 열고 닫기
+  let isSideOpen = false;
   sidebar_btn.click(function () {
-    var sidebarWidth = sidebar.width();
-    console.log("clicked");
-
     if (isSideOpen) {
-      sidebarWrap.css("transform", "translateX(0)");
+      sidebar_wrap.css("transform", `translateX(-${sidebar_width})`);
     } else {
-      sidebarWrap.css("transform", `translateX(-${sidebarWidth}px)`);
+      sidebar_wrap.css("transform", `translateX(0)`);
     }
     isSideOpen = !isSideOpen;
   });
 
-  // 태그 로테이션 랜덤으로
-  tag.each(function () {
-    var randomRot = Math.floor(Math.random() * 12 - 6);
-
-    $(this).css("transform", "rotate(" + randomRot + "deg)");
-  });
-
-  var canIsOpen = 0;
   // 캔 click 시
+  var canIsOpen = 0;
   can.mousedown(function () {
     canIsOpen = 1;
 
@@ -89,8 +89,6 @@ $(document).ready(function () {
   // 캔 unclick 시
   can.mouseup(function () {
     canIsOpen = 0;
-    // cursor.css("visibility", 'visible');
-    // cursor.css("opacity", '1');
 
     modal.css("visibility", "hidden");
     modal.css("opacity", "0");
