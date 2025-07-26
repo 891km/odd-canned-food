@@ -73,7 +73,7 @@ header h1 {
   padding-top: 10vh;
   transform: scale(1);
 
-  background-image: url("../images/icons/sidebar_title.png");
+  background-image: url("../images/icons/sidebar-title.png");
   background-size: 300px;
   background-repeat: no-repeat;
   background-position: center;
@@ -98,11 +98,11 @@ header h1 {
   color: #cdcdcd;
   cursor: pointer;
   transition: all 0.3s ease;
-  cursor: url("../images/cursor/cursor_pointer_60px.png") 20 -10, auto;
+  cursor: url("../images/cursor/cursor-pointer-60px.png") 20 -10, auto;
 }
 
 #sidebar-btn:active {
   font-size: 32pt;
-  cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
+  cursor: url("../images/cursor/cursor-hover-60px.png") 20 -10, auto;
   transition: all 0.3s ease;
 }

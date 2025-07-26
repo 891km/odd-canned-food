@@ -80,19 +80,19 @@ footer {
   grid-template-rows: 66% 34%;
 }
 
-.shelf_top {
+.shelf-top {
   outline: solid 1px rgb(65, 44, 30);
 
   background-color: rgb(139, 60, 14);
-  background-image: url("../images/shelf_texture.jpg");
+  background-image: url("../images/shelf-texture.jpg");
   background-size: cover;
   filter: brightness(1);
 }
-.shelf_front {
+.shelf-front {
   outline: solid 1px rgb(65, 44, 30);
 
   background-color: rgb(139, 60, 14);
-  background-image: url("../images/shelf_texture.jpg");
+  background-image: url("../images/shelf-texture.jpg");
   background-size: cover;
   filter: brightness(1.5);
 }
@@ -133,12 +133,12 @@ footer {
   filter: drop-shadow(0 0.2rem 0.1rem rgba(0, 0, 0, 0.3));
 }
 
-.can_close {
+.can-close {
   opacity: 1;
   z-index: 0;
 }
 
-.can_open {
+.can-open {
   opacity: 0;
   z-index: -1;
 }
@@ -148,10 +148,10 @@ footer {
 }
 
 .can:active {
-  cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
+  cursor: url("../images/cursor/cursor-hover-60px.png") 20 -10, auto;
 }
 
-.can:active .can_open {
+.can:active .can-open {
   opacity: 1;
   z-index: 1;
   filter: drop-shadow(0 0.2rem 0.1rem rgba(0, 0, 0, 0));
@@ -200,11 +200,11 @@ footer {
 }
 
 #zoom-btn:hover {
-  background-image: url("../images/icons/zoom_hover.png");
+  background-image: url("../images/icons/zoom-hover.png");
 }
 
 #zoom-btn:active {
   transform: translate(-50%, 0%) scale(1.1);
-  cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
+  cursor: url("../images/cursor/cursor-hover-60px.png") 20 -10, auto;
   transform: all 0.2s ease;
 }
