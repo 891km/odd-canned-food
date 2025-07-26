@@ -79,26 +79,6 @@ header h1 {
   background-position: center;
 }
 
-header h1:hover {
-  color: black;
-  cursor: pointer;
-  font-size: 31pt;
-  transition: all 0.3s ease;
-  cursor: url("../images/cursor/cursor_pointer_60px.png") 20 -10, auto;
-}
-
-header h1:active {
-  color: white;
-  cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
-  transition: all 0.3s ease;
-}
-
-header h1:active ~ .zoom-btn {
-  opacity: 0%;
-  background-color: white;
-  transition: all 0.3s ease;
-}
-
 #sidebar p {
   font-family: "Pretendard", sans-serif;
   font-weight: 400;
@@ -114,27 +94,51 @@ header h1:active ~ .zoom-btn {
   margin: auto;
 }
 
-.zoom-btn {
-  opacity: 100%;
-  background-image: url("../images/icons/zoom.png");
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  left: 50%;
-  top: 24px;
-  width: 55px;
-  height: 55px;
+header h1:hover {
+  color: black;
+  cursor: pointer;
+  font-size: 31pt;
+  transition: all 0.3s ease;
+  cursor: url("../images/cursor/cursor_pointer_60px.png") 20 -10, auto;
+}
+
+header h1:active {
+  color: white;
+  cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
+  transition: all 0.3s ease;
+}
+
+header h1:active ~ #zoom-btn {
+  opacity: 0%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+#zoom-btn {
+  all: unset;
+  position: fixed;
+  right: 0px;
+  bottom: calc(var(--zoomBtnSize) * 0.5);
+
+  background: url("../images/icons/zoom.png") no-repeat center;
+  background-size: calc(var(--zoomBtnSize) * 0.7);
+  width: var(--zoomBtnSize); /* 55px */
+  height: var(--zoomBtnSize);
+
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
   transform-origin: center, center;
   transform: translate(-50%, 0%) scale(1);
   z-index: 100;
 }
 
-.zoom-btn:hover {
+#zoom-btn:hover {
   background-image: url("../images/icons/zoom_hover.png");
-  /* transform: translate(-50%, 0%) scale(1); */
 }
 
-.zoom-btn:active {
+#zoom-btn:active {
   transform: translate(-50%, 0%) scale(1.1);
   cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
   transform: all 0.2s ease;

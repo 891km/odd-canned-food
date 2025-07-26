@@ -40,8 +40,7 @@ main footer {
   z-index: 2;
 
   background-color: white;
-  border: solid #cdcdcd;
-  border-width: 3px;
+  border: 3px solid #cdcdcd;
   width: auto;
   height: 60px;
   margin-left: 28px;

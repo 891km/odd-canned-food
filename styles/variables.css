@@ -45,5 +45,7 @@
 
   --shelfHeight: calc(var(--canWidth) * 0.64);
 
+  --zoomBtnSize: 84px;
+
   --modalWidth: 270px;
 }

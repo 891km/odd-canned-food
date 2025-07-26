@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // 변수
-  var zoom_btn = $(".zoom-btn");
+  var zoom_btn = $("#zoom-btn");
   // sidebar
   var sidebar_btn = $("#sidebar-btn");
   var sidebar_wrap = $("#head-sidebar-wrap");
