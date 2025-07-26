@@ -94,16 +94,15 @@ header h1 {
   margin: auto;
 }
 
-header h1:hover {
-  color: black;
+#sidebar-btn:hover {
+  color: #cdcdcd;
   cursor: pointer;
-  font-size: 31pt;
   transition: all 0.3s ease;
   cursor: url("../images/cursor/cursor_pointer_60px.png") 20 -10, auto;
 }
 
-header h1:active {
-  color: white;
+#sidebar-btn:active {
+  font-size: 32pt;
   cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
   transition: all 0.3s ease;
 }
