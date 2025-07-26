@@ -179,27 +179,6 @@ footer {
   margin: auto;
 }
 
-.tag_from,
-.tag_category,
-.tag_gram,
-.tag_kcal {
-  width: auto;
-  height: auto;
-  border-radius: 30px;
-  padding: 4px 8px 4px 8px;
-  margin: 2px;
-
-  color: black;
-  background-color: white;
-  outline: solid 1px black;
-}
-
-.tag_from {
-  color: white;
-  background-color: black;
-  outline: solid 1px black;
-}
-
 #zoom-btn {
   all: unset;
   position: fixed;

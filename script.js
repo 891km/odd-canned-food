@@ -15,13 +15,13 @@ $(document).ready(function () {
 
   // modal
   var modal = $(".modal");
-  var modal_img = $(".modal_img");
-  var modal_title = $(".modal_title");
-  var modal_para = $(".modal_para");
-  var modal_from = $(".tag_from");
-  var modal_category = $(".tag_category");
-  var modal_gram = $(".tag_gram");
-  var modal_kcal = $(".tag_kcal");
+  var modal_img = $(".modal-img");
+  var modal_title = $(".modal-title");
+  var modal_para = $(".modal-para");
+  var modal_from = $(".modal-from");
+  var modal_category = $(".modal-category");
+  var modal_gram = $(".modal-gram");
+  var modal_kcal = $(".modal-kcal");
   var modal_width = parseInt($(".modal").css("width"));
 
   var tag = $(".categoryTag");
