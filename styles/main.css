@@ -1,4 +1,4 @@
-main {
+.main-footer-wrap {
   /* background-color: yellow; */
   width: 100vw;
   height: 100vh;
@@ -12,25 +12,28 @@ main {
   display: block;
 }
 
-main section,
-main footer {
+main {
+  width: 100%;
+  height: 100%;
+}
+
+main section {
   position: relative;
   width: 100vw;
   height: var(--sectionHeight);
 
-  max-width: 100vw;
   overflow: hidden;
-
   scroll-snap-align: start;
 }
 
 main section:first-child {
-  padding-top: 20px;
+  height: calc(var(--sectionHeight) + 10px);
 }
 
-main footer {
+footer {
+  position: relative;
   width: 100vw;
-  height: calc(100vh - var(--sectionHeight));
+  height: calc(var(--sectionHeight) * 2);
 }
 
 .categoryTag {
@@ -195,4 +198,34 @@ main footer {
   color: white;
   background-color: black;
   outline: solid 1px black;
+}
+
+#zoom-btn {
+  all: unset;
+  position: fixed;
+  right: 0px;
+  bottom: calc(var(--zoomBtnSize) * 0.5);
+
+  background: url("../images/icons/zoom.png") no-repeat center;
+  background-size: calc(var(--zoomBtnSize) * 0.7);
+  width: var(--zoomBtnSize); /* 55px */
+  height: var(--zoomBtnSize);
+
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
+  transform-origin: center, center;
+  transform: translate(-50%, 0%) scale(1);
+  z-index: 100;
+}
+
+#zoom-btn:hover {
+  background-image: url("../images/icons/zoom_hover.png");
+}
+
+#zoom-btn:active {
+  transform: translate(-50%, 0%) scale(1.1);
+  cursor: url("../images/cursor/cursor_hover_60px.png") 20 -10, auto;
+  transform: all 0.2s ease;
 }
